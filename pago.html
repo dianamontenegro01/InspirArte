@@ -1,0 +1,57 @@
+
+<!-- 
+ Crear una página de pago
+Crea una aplicación funcionalmente similar a este proyecto de ejemplo . Intenta no copiarlo; dale tu propio estilo.
+
+Objetivo: Cumplir las historias de usuario a continuación y lograr aprobar todas las pruebas para completar el laboratorio.
+
+Historias de usuarios:
+
+Deberías tener un h1elemento con el texto Checkout.
+Debes tener dos sectionelementos inmediatamente después del h1elemento.
+Debes tener un h2elemento con el texto Your Cartdentro de la primera sección.
+Debes tener una imagen de un elemento en la primera sección con el texto alternativo correspondiente. Puedes usar esta imagen si lo deseas:https://cdn.freecodecamp.org/curriculum/labs/cube.jpg
+Debes tener un h2elemento con el texto Payment Informationdentro de la segunda sección.
+Debería tener un formelemento dentro de la segunda sección.
+Debe tener una entrada con un idy namede card-name, y un typede textdentro de su formulario y un labelasociado con él.
+Debe tener una entrada con un idy namede card-number, y un typede textdentro de su formulario y un labelasociado con él.
+Debe tener al menos dos inputelementos con el requiredatributo.
+Debes incluir un spanelemento con el texto *y aria-hiddenconfigurarlo truedentro del labelelemento para cada entrada requerida, de modo que los campos obligatorios se indiquen visualmente.
+Debe tener un pelemento con un texto de ayuda que explique el formato del número de tarjeta requerido, ubicado inmediatamente después de la entrada del número de tarjeta. pDebe tener un " idof" card-number-helpy ser referenciado por la entrada del número de tarjeta usando " aria-describedby.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Checkout Page</title>
+</head>
+
+<body>
+    <h1>Checkout</h1>
+
+    <section>
+        <h2>Your Cart</h2>
+        <img src="https://cdn.freecodecamp.org/curriculum/labs/cube.jpg" alt="Juego del cuadrado">
+    </section>
+    <section>
+        <h2>Payment Information</h2>
+        <form>
+            <label  for="card-name">Nombre del titular de la tarjeta 
+                <span aria-hidden="true">*</span>
+            </label>
+            <input required id="card-name" type="text" name="card-name">
+            
+            <label aria-hidden="true" for="card-number">Número de tarjeta 
+                <span aria-hidden="true">*</span>
+            </label>
+            <input required  aria-describedby="card-number-help" id="card-number" type="text" name="card-number">
+   
+            <p  id="card-number-help">Ingrese el número de su tarjeta de 16 dígitos, sin espacios ni guiones.</p>
+        </form>
+    </section>
+
+
+</body>
+
+</html>
