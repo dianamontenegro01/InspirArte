@@ -1,34 +1,183 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>carrito</title>
-    <link rel="stylesheet" href="css/styles.css">
-    
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Accesorios hechos para acompañarte todos los días. Descubre aretes, collares y pulseras en InspirArte.">
+  <meta name="theme-color" content="#f7f3ed">
+  <title>InspirArte | Accesorios con alma</title>
+  <link rel="stylesheet" href="css/styles.css">
+  
 </head>
-
 <body>
-<header>
-    <h1>Mercado Aretes</h1>
-    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-        Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque 
-        penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-        Donec quam felis, ultricies nec, pellentesque eu, pretium quis, 
-        sem. Nulla consequat massa quis enim. Donec pede justo, fringilla 
-        vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, 
-        imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede 
-        mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum 
-        semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, 
-        porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem 
-        ante, dapibus in, viverra quis, feugiat a, tellus. 
+  <div class="announcement">Detalles hechos para acompañarte · Envíos a todo el país</div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#" aria-label="InspirArte, inicio">Inspir<span>Arte</span></a>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Colección</a>
+        <a href="#nosotros">Nuestra historia</a>
+      </nav>
+      <a class="cart-link" href="#productos" aria-label="Carrito de compras, 0 artículos">Bolsa <span id="cart-count">0</span></a>
+    </div>
+  </header>
 
-    </p>
-</header>
-    
+  <main>
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Pequeños detalles, grandes historias</p>
+        <h1 id="hero-title">Lleva contigo algo especial.</h1>
+        <p>Accesorios con carácter, inspirados en la belleza de lo natural y creados para hacer tuyo cada momento.</p>
+        <a class="button" href="#productos">DESCUBRE LA COLECCIÓN</a>
+      </div>
+      <div class="hero-image" role="img" aria-label="Accesorios dorados artesanales en tonos cálidos"></div>
+    </section>
 
+    <div class="benefits" aria-label="Beneficios de InspirArte">
+      <span>Diseños seleccionados con cariño</span>
+      <span>Empaque listo para regalar</span>
+      <span>Compra segura</span>
+    </div>
 
+    <section class="products-section" id="productos" aria-labelledby="products-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Tu próxima pieza favorita</p>
+          <h2 id="products-title">La colección</h2>
+        </div>
+        <div class="filters" role="group" aria-label="Filtrar accesorios">
+          <button class="filter-button" type="button" data-filter="todos" aria-pressed="true">Todos</button>
+          <button class="filter-button" type="button" data-filter="aretes" aria-pressed="false">Aretes</button>
+          <button class="filter-button" type="button" data-filter="collares" aria-pressed="false">Collares</button>
+          <button class="filter-button" type="button" data-filter="pulseras" aria-pressed="false">Pulseras</button>
+        </div>
+      </div>
 
-    <script src="js/script.js"></script>
+      <div class="product-grid">
+        <article class="product-card" data-category="aretes">
+          <div class="product-image-wrap">
+            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Aretes dorados de diseño orgánico" loading="lazy">
+            <span class="product-tag">Favorito</span>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Aretes</p>
+            <h3>Sol de otoño</h3>
+            <p class="product-description">Aretes dorados livianos con forma orgánica. Un toque de luz para todos los días.</p>
+            <div class="product-meta"><span class="price">$48.000 COP</span><span class="stock">Disponibles: 8</span></div>
+            <button class="add-button" type="button" data-product="Sol de otoño">Añadir a la bolsa</button>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="collares">
+          <div class="product-image-wrap">
+            <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Collar delicado en tono dorado" loading="lazy">
+            <span class="product-tag">Hecho para ti</span>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Collares</p>
+            <h3>Raíz dorada</h3>
+            <p class="product-description">Cadena delicada con un dije sutil, inspirada en las formas de la naturaleza.</p>
+            <div class="product-meta"><span class="price">$62.000 COP</span><span class="stock">Disponibles: 5</span></div>
+            <button class="add-button" type="button" data-product="Raíz dorada">Añadir a la bolsa</button>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="pulseras">
+          <div class="product-image-wrap">
+            <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Pulsera dorada para combinar" loading="lazy">
+          </div>
+          <div class="product-info">
+            <p class="product-category">Pulseras</p>
+            <h3>Ritual de calma</h3>
+            <p class="product-description">Pulsera de acabado cálido, perfecta para combinar y llevar siempre contigo.</p>
+            <div class="product-meta"><span class="price">$42.000 COP</span><span class="stock">Disponibles: 12</span></div>
+            <button class="add-button" type="button" data-product="Ritual de calma">Añadir a la bolsa</button>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="aretes">
+          <div class="product-image-wrap">
+            <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Aretes pequeños y elegantes" loading="lazy">
+          </div>
+          <div class="product-info">
+            <p class="product-category">Aretes</p>
+            <h3>Luna de barro</h3>
+            <p class="product-description">Una silueta suave y atemporal para acompañar tus planes favoritos.</p>
+            <div class="product-meta"><span class="price">$36.000 COP</span><span class="stock">Disponibles: 3</span></div>
+            <button class="add-button" type="button" data-product="Luna de barro">Añadir a la bolsa</button>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="collares">
+          <div class="product-image-wrap">
+            <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Collar con detalles dorados" loading="lazy">
+          </div>
+          <div class="product-info">
+            <p class="product-category">Collares</p>
+            <h3>Brisa de campo</h3>
+            <p class="product-description">Un diseño delicado que suma textura y un brillo discreto a tu look.</p>
+            <div class="product-meta"><span class="price">$55.000 COP</span><span class="stock">Disponibles: 6</span></div>
+            <button class="add-button" type="button" data-product="Brisa de campo">Añadir a la bolsa</button>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="pulseras">
+          <div class="product-image-wrap">
+            <img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Pulsera artesanal en tonos cálidos" loading="lazy">
+          </div>
+          <div class="product-info">
+            <p class="product-category">Pulseras</p>
+            <h3>Tierra nuestra</h3>
+            <p class="product-description">Una pieza versátil de inspiración natural, ideal para regalar o regalarte.</p>
+            <div class="product-meta"><span class="price">$39.000 COP</span><span class="stock">Disponibles: 2</span></div>
+            <button class="add-button" type="button" data-product="Tierra nuestra">Añadir a la bolsa</button>
+          </div>
+        </article>
+      </div>
+      <p class="visually-hidden" id="cart-message" aria-live="polite"></p>
+    </section>
+
+    <section class="story" id="nosotros" aria-labelledby="story-title">
+      <p class="eyebrow">InspirArte</p>
+      <h2 id="story-title">Lo bonito está en los detalles.</h2>
+      <p>Elegimos cada accesorio pensando en quienes disfrutan expresarse a su manera. Encuentra esa pieza que se siente como tú.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 InspirArte · Accesorios con alma</p>
+  </footer>
+
+  <script>
+    const filterButtons = document.querySelectorAll(".filter-button");
+    const productCards = document.querySelectorAll(".product-card");
+    const cartCount = document.querySelector("#cart-count");
+    const cartLink = document.querySelector(".cart-link");
+    const cartMessage = document.querySelector("#cart-message");
+    let itemsInCart = 0;
+
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const selectedCategory = button.dataset.filter;
+
+        filterButtons.forEach((filter) => {
+          filter.setAttribute("aria-pressed", String(filter === button));
+        });
+        productCards.forEach((card) => {
+          card.hidden = selectedCategory !== "todos" && card.dataset.category !== selectedCategory;
+        });
+      });
+    });
+
+    document.querySelectorAll(".add-button").forEach((button) => {
+      button.addEventListener("click", () => {
+        itemsInCart += 1;
+        cartCount.textContent = String(itemsInCart);
+        cartLink.setAttribute("aria-label", `Carrito de compras, ${itemsInCart} artículos`);
+        cartMessage.textContent = `${button.dataset.product} añadido a la bolsa.`;
+      });
+    });
+  </script>
 </body>
 </html>
