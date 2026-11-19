@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Survey Form</title>
+  </head>
+
+  <body>
+
+    <heder>
+    <h1 id="title">Cuentanos tu experincia con InspirArte</h1>
+    <p id="description">Esta tienda se esta creo por un sueño, cada dia vamos mejorando nuestros diseños, por eso queremos que nos compertas la experiencia que has tenodo con nosotros</p>
+    </heder>
+
+    <form id="survey-form">
+
+      <fielset>
+      
+          <legend>Datos Personales</legend>
+          
+          <label for="name" id="name-label"> Ingresa tu nombre</label>
+          <input required type ="text" id="name" placeholder="ej.Diana Montenegro">
+          
+          <label id="email-label" for="email"> Correo Electronico </label>      
+          <input required type ="email" id="email" placeholder="ej.diana@email.com">
+          
+          <label id="number-label" for="number"> Telefono </label>
+          <input required type ="number" id="number" min="10" max="10" placeholder="ej.3200001211">>
+         
+          <label id="edad-label" for="edad"> Que edad tienes </label>
+          <input required type ="number" id="edad" min="10" max="10" placeholder="ej.29">
+          <hr>
+        </fielsed>
+
+    <legend>Como fue tu experiencia con nuetra pagina Wep</legend>
+
+      <select id="dropdown" name="dropdown">
+
+        <option value="buena" >Buena</option>
+        <option value="regular">No tan buena</option>
+        <option value="mala">No la recomiendo</option>
+
+      </select>
+      <hr>
+      <legend>Nos recomendaria a otras personas</legend>
+
+      <select id="recomendar" name="recomendar">
+
+        <option value="siempre">Simepre</option>
+        <option value="depronto">Depronto</option>
+        <option value="mno">no</option>
+
+      </select>
+      <hr>
+    <legend>Volveria a comprar en nustra tienda</legend>
+
+        <input checked type="radio" id="si" value="si"name="comprar">
+        <label for="si">SI</label>
+        <input type="radio" id="no" value="no" name="comprar">
+        <label for="no">NO</label>
+        <input type="radio" id="talvez" value="talvez" name="comprar">
+        <label for="talvez">TALVEZ</label>
+        <hr>
+    <legend>Como estuvo tu pedido</legend>
+
+        <input checked type="checkbox" id="perfecto" value="perfecto"name="comprar">
+        <label for="perfecto">Perfecto</label>
+        <input type="checkbox" id="regular" value="regular"name="comprar">
+        <label for="regular">Regular</label>
+        <input type="checkbox" id="malos" value ="malos" name="comprar">
+        <label for="malos">Malos</label>    
+        <hr>
+    <legend>Dejanos saber tus comentarios</legend>
+
+      <textarea cols="30" rows="10" name="comments" id="comentario"> </textarea>
+      <hr>
+      <button id="submit">Enviar Encuenta</button>
+    </form>
+  </body>
+</html>
