@@ -1,57 +1,48 @@
 
-<!-- 
- Crear una página de pago
-Crea una aplicación funcionalmente similar a este proyecto de ejemplo . Intenta no copiarlo; dale tu propio estilo.
-
-Objetivo: Cumplir las historias de usuario a continuación y lograr aprobar todas las pruebas para completar el laboratorio.
-
-Historias de usuarios:
-
-Deberías tener un h1elemento con el texto Checkout.
-Debes tener dos sectionelementos inmediatamente después del h1elemento.
-Debes tener un h2elemento con el texto Your Cartdentro de la primera sección.
-Debes tener una imagen de un elemento en la primera sección con el texto alternativo correspondiente. Puedes usar esta imagen si lo deseas:https://cdn.freecodecamp.org/curriculum/labs/cube.jpg
-Debes tener un h2elemento con el texto Payment Informationdentro de la segunda sección.
-Debería tener un formelemento dentro de la segunda sección.
-Debe tener una entrada con un idy namede card-name, y un typede textdentro de su formulario y un labelasociado con él.
-Debe tener una entrada con un idy namede card-number, y un typede textdentro de su formulario y un labelasociado con él.
-Debe tener al menos dos inputelementos con el requiredatributo.
-Debes incluir un spanelemento con el texto *y aria-hiddenconfigurarlo truedentro del labelelemento para cada entrada requerida, de modo que los campos obligatorios se indiquen visualmente.
-Debe tener un pelemento con un texto de ayuda que explique el formato del número de tarjeta requerido, ubicado inmediatamente después de la entrada del número de tarjeta. pDebe tener un " idof" card-number-helpy ser referenciado por la entrada del número de tarjeta usando " aria-describedby.
- -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8" />
-    <title>Checkout Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar compra | InspirArte</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
-    <h1>Checkout</h1>
-
-    <section>
-        <h2>Your Cart</h2>
-        <img src="https://cdn.freecodecamp.org/curriculum/labs/cube.jpg" alt="Juego del cuadrado">
-    </section>
-    <section>
-        <h2>Payment Information</h2>
-        <form>
-            <label  for="card-name">Nombre del titular de la tarjeta 
-                <span aria-hidden="true">*</span>
-            </label>
-            <input required id="card-name" type="text" name="card-name">
-            
-            <label aria-hidden="true" for="card-number">Número de tarjeta 
-                <span aria-hidden="true">*</span>
-            </label>
-            <input required  aria-describedby="card-number-help" id="card-number" type="text" name="card-number">
-   
-            <p  id="card-number-help">Ingrese el número de su tarjeta de 16 dígitos, sin espacios ni guiones.</p>
-        </form>
-    </section>
-
-
+    <div class="announcement">Compra segura · Empaque listo para regalar</div>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html">Inspir<span>Arte</span></a>
+        <nav class="main-nav"><a href="index.html">Volver a la tienda</a></nav>
+        <a class="cart-link" href="carrito.html">Bolsa <span id="cart-count">0</span></a>
+      </div>
+    </header>
+    <main class="checkout-page">
+      <h1>Checkout</h1>
+        <section class="checkout-card" id="checkout-cart">
+          <h2>Your Cart</h2>
+          <div id="checkout-items"></div>
+        </section>
+        <section class="checkout-card">
+          <h2>Payment Information</h2>
+          <form id="payment-form">
+            <label for="customer-name">Nombre completo <span aria-hidden="true">*</span></label>
+            <input required id="customer-name" name="customer-name" type="text" autocomplete="name" placeholder="Nombre y apellido">
+            <label for="card-name">Nombre del titular de la tarjeta <span aria-hidden="true">*</span></label>
+            <input required id="card-name" name="card-name" type="text" autocomplete="cc-name" placeholder="Como aparece en la tarjeta">
+            <label for="card-number">Número de tarjeta <span aria-hidden="true">*</span></label>
+            <input required aria-describedby="card-number-help" id="card-number" name="card-number" type="text" inputmode="numeric" autocomplete="cc-number" maxlength="19" placeholder="0000 0000 0000 0000">
+            <p id="card-number-help" class="field-help">Ingrese el número de su tarjeta de 16 dígitos.</p>
+            <div class="field-grid">
+              <div><label for="expiry">Vencimiento <span aria-hidden="true">*</span></label><input required id="expiry" name="expiry" type="text" inputmode="numeric" maxlength="5" placeholder="MM/AA"></div>
+              <div><label for="cvv">CVV <span aria-hidden="true">*</span></label><input required id="cvv" name="cvv" type="password" inputmode="numeric" maxlength="4" placeholder="123"></div>
+            </div>
+            <div class="checkout-total"><span>Total a pagar</span><strong id="checkout-total">$0 COP</strong></div>
+            <button class="button payment-button" type="submit">Confirmar pedido</button>
+            <p id="payment-message" class="payment-message" aria-live="polite"></p>
+          </form>
+        </section>
+    </main>
+    <script src="js/store.js"></script>
 </body>
-
 </html>

@@ -19,7 +19,7 @@
         <a href="#productos">Colección</a>
         <a href="#nosotros">Nuestra historia</a>
       </nav>
-      <a class="cart-link" href="#productos" aria-label="Carrito de compras, 0 artículos">Bolsa <span id="cart-count">0</span></a>
+      <a class="cart-link" href="carrito.html" aria-label="Carrito de compras, 0 artículos">Bolsa <span id="cart-count">0</span></a>
     </div>
   </header>
 
@@ -50,6 +50,7 @@
           <button class="filter-button" type="button" data-filter="todos" aria-pressed="true">Todos</button>
           <button class="filter-button" type="button" data-filter="aretes" aria-pressed="false">Aretes</button>
           <button class="filter-button" type="button" data-filter="collares" aria-pressed="false">Collares</button>
+          <button class="filter-button" type="button" data-filter="cadenas" aria-pressed="false">Cadenas</button>
           <button class="filter-button" type="button" data-filter="pulseras" aria-pressed="false">Pulseras</button>
         </div>
       </div>
@@ -65,21 +66,21 @@
             <h3>Sol de otoño</h3>
             <p class="product-description">Aretes dorados livianos con forma orgánica. Un toque de luz para todos los días.</p>
             <div class="product-meta"><span class="price">$48.000 COP</span><span class="stock">Disponibles: 8</span></div>
-            <button class="add-button" type="button" data-product="Sol de otoño">Añadir a la bolsa</button>
+            <button class="add-button" type="button" data-id="sol-otono" data-name="Sol de otoño" data-price="48000" data-image="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&amp;fit=crop&amp;w=700&amp;q=80">Añadir a la bolsa</button>
           </div>
         </article>
 
-        <article class="product-card" data-category="collares">
+        <article class="product-card" data-category="cadenas">
           <div class="product-image-wrap">
             <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Collar delicado en tono dorado" loading="lazy">
             <span class="product-tag">Hecho para ti</span>
           </div>
           <div class="product-info">
-            <p class="product-category">Collares</p>
+            <p class="product-category">Cadenas</p>
             <h3>Raíz dorada</h3>
             <p class="product-description">Cadena delicada con un dije sutil, inspirada en las formas de la naturaleza.</p>
             <div class="product-meta"><span class="price">$62.000 COP</span><span class="stock">Disponibles: 5</span></div>
-            <button class="add-button" type="button" data-product="Raíz dorada">Añadir a la bolsa</button>
+            <button class="add-button" type="button" data-id="raiz-dorada" data-name="Raíz dorada" data-price="62000" data-image="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&amp;fit=crop&amp;w=700&amp;q=80">Añadir a la bolsa</button>
           </div>
         </article>
 
@@ -92,7 +93,7 @@
             <h3>Ritual de calma</h3>
             <p class="product-description">Pulsera de acabado cálido, perfecta para combinar y llevar siempre contigo.</p>
             <div class="product-meta"><span class="price">$42.000 COP</span><span class="stock">Disponibles: 12</span></div>
-            <button class="add-button" type="button" data-product="Ritual de calma">Añadir a la bolsa</button>
+            <button class="add-button" type="button" data-id="ritual-calma" data-name="Ritual de calma" data-price="42000" data-image="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&amp;fit=crop&amp;w=700&amp;q=80">Añadir a la bolsa</button>
           </div>
         </article>
 
@@ -105,7 +106,7 @@
             <h3>Luna de barro</h3>
             <p class="product-description">Una silueta suave y atemporal para acompañar tus planes favoritos.</p>
             <div class="product-meta"><span class="price">$36.000 COP</span><span class="stock">Disponibles: 3</span></div>
-            <button class="add-button" type="button" data-product="Luna de barro">Añadir a la bolsa</button>
+            <button class="add-button" type="button" data-id="luna-barro" data-name="Luna de barro" data-price="36000" data-image="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&amp;fit=crop&amp;w=700&amp;q=80">Añadir a la bolsa</button>
           </div>
         </article>
 
@@ -118,7 +119,7 @@
             <h3>Brisa de campo</h3>
             <p class="product-description">Un diseño delicado que suma textura y un brillo discreto a tu look.</p>
             <div class="product-meta"><span class="price">$55.000 COP</span><span class="stock">Disponibles: 6</span></div>
-            <button class="add-button" type="button" data-product="Brisa de campo">Añadir a la bolsa</button>
+            <button class="add-button" type="button" data-id="brisa-campo" data-name="Brisa de campo" data-price="55000" data-image="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&amp;fit=crop&amp;w=700&amp;q=80">Añadir a la bolsa</button>
           </div>
         </article>
 
@@ -131,7 +132,7 @@
             <h3>Tierra nuestra</h3>
             <p class="product-description">Una pieza versátil de inspiración natural, ideal para regalar o regalarte.</p>
             <div class="product-meta"><span class="price">$39.000 COP</span><span class="stock">Disponibles: 2</span></div>
-            <button class="add-button" type="button" data-product="Tierra nuestra">Añadir a la bolsa</button>
+            <button class="add-button" type="button" data-id="tierra-nuestra" data-name="Tierra nuestra" data-price="39000" data-image="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&amp;fit=crop&amp;w=700&amp;q=80">Añadir a la bolsa</button>
           </div>
         </article>
       </div>
@@ -149,35 +150,6 @@
     <p>&copy; 2026 InspirArte · Accesorios con alma</p>
   </footer>
 
-  <script>
-    const filterButtons = document.querySelectorAll(".filter-button");
-    const productCards = document.querySelectorAll(".product-card");
-    const cartCount = document.querySelector("#cart-count");
-    const cartLink = document.querySelector(".cart-link");
-    const cartMessage = document.querySelector("#cart-message");
-    let itemsInCart = 0;
-
-    filterButtons.forEach((button) => {
-      button.addEventListener("click", () => {
-        const selectedCategory = button.dataset.filter;
-
-        filterButtons.forEach((filter) => {
-          filter.setAttribute("aria-pressed", String(filter === button));
-        });
-        productCards.forEach((card) => {
-          card.hidden = selectedCategory !== "todos" && card.dataset.category !== selectedCategory;
-        });
-      });
-    });
-
-    document.querySelectorAll(".add-button").forEach((button) => {
-      button.addEventListener("click", () => {
-        itemsInCart += 1;
-        cartCount.textContent = String(itemsInCart);
-        cartLink.setAttribute("aria-label", `Carrito de compras, ${itemsInCart} artículos`);
-        cartMessage.textContent = `${button.dataset.product} añadido a la bolsa.`;
-      });
-    });
-  </script>
+  <script src="js/store.js"></script>
 </body>
 </html>

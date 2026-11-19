@@ -1,34 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
-    
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Carriro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu bolsa | InspirArte</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
-    <header>
-      <div id="titulo-tienda">        
-        <h1>Tienda InspirArte</h1>
-      </div>   
-        <h2>Carro </h2>
-
+    <div class="announcement">Detalles hechos para acompañarte · Envíos a todo el país</div>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html">Inspir<span>Arte</span></a>
+        <nav class="main-nav" aria-label="Navegación principal">
+          <a href="index.html">Inicio</a>
+          <a href="index.html#productos">Colección</a>
+          <a href="index.html#nosotros">Nuestra historia</a>
+        </nav>
+        <a class="cart-link" href="carrito.html">Bolsa <span id="cart-count">0</span></a>
+      </div>
     </header>
-
-    <h3>PRODUCTOS QUE AGREGASTE</h3>
-    <div id="contenedor-pedido"></div>
-    
-    
-    <button id="aplicar-cupon" class="btn">AplicarCupon</button>
-
-    <div id="resumen-compra" ></div>
-    <button id="continuar" class="btn">Continuar Compra</button>
-    
-
-
-    <script src="js/script.js"></script>
+    <main class="cart-page">
+      <div class="cart-heading">
+        <p class="eyebrow">Tu selección</p>
+        <h1>La bolsa de compras</h1>
+      </div>
+      <div class="cart-layout">
+        <section class="cart-items" id="contenedor-pedido" aria-label="Productos en la bolsa"></section>
+        <aside class="order-summary">
+          <h2>Resumen del pedido</h2>
+          <div class="summary-row"><span>Subtotal</span><strong id="subtotal">$0 COP</strong></div>
+          <div class="summary-row"><span>Envío</span><strong id="shipping">$12.000 COP</strong></div>
+          <div class="summary-row summary-total"><span>Total</span><strong id="total">$0 COP</strong></div>
+          <a class="button checkout-button" href="pago.html">Continuar con la compra</a>
+          <a class="continue-link" href="index.html#productos">Seguir viendo la colección</a>
+        </aside>
+      </div>
+    </main>
+    <footer class="site-footer"><p>&copy; 2026 InspirArte · Accesorios con alma</p></footer>
+    <script src="js/store.js"></script>
 </body>
-
 </html>
